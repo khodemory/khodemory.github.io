@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
-<!-- page content -->
+<head>
+  <title>URL Proxy</title>
+</head>
 
-<script>
-  // Fetch proxy call
-  fetch('/workerscript?url=raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/f/f1') 
-</script>
+<body>
+  <h1>URL Proxy</h1>
+  
+  <p>Enter a URL to proxy:</p>
+  
+  <input type="text" id="url-input">
+  
+  <button onclick="proxyURL()">Proxy URL</button>
+  
+  <iframe id="proxy-iframe"></iframe>
+
+  <script>
+    function proxyURL() {
+      var url = document.getElementById("url-input").value;
+      document.getElementById("proxy-iframe").src = "https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/f/f1" + url;
+    }
+  </script>
 
 </body>
 </html>
