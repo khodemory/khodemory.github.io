@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Khodemory Blog</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <h1>Khodemory Blog</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>  
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h2>test test test test test</h2>
+      <p>test test test test test test test test test test test tes</p>
+      <a href="/" class="btn">Go back to home</a>
+    </div>
+  </section>
+
+      
+      <!-- Additional Featured Items -->
+      
+    </div>
+  </section>
+
+  <!-- More Sections -->
+
+</body>
+</html>
