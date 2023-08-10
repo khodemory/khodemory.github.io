@@ -1,36 +1,36 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title>URL Proxy</title>
+  <title>Display External URL Content</title>
 </head>
-
 <body>
 
-  <h1>URL Proxy</h1>
-
-  <p>Enter a URL to proxy:</p>
-
-  <input type="text" id="url-input">
-
-  <button onclick="proxyURL()">Proxy URL</button>
-
-  <div id="url-content"></div>
+  <div id="external-content"></div>
 
   <script>
-
-    function proxyURL() {
-
-      var url = document.getElementById("url-input").value;
-      var proxy = "https://my-proxy.com/";
-
-      fetch(proxy + url)
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("url-content").innerHTML = data;
-        });
-
-    }
-
+    // The URL to load content from 
+    var externalUrl = 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/f/f1';
+    
+    // The element on the page to display the external content
+    var contentContainer = document.getElementById('external-content');
+    
+    // Create a new XMLHttpRequest
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', externalUrl);
+    
+    // Called when the response is ready
+    xhr.onload = function() {
+      if (xhr.status === 200) { 
+        // Content retrieved successfully
+        contentContainer.innerHTML = xhr.responseText; 
+      } else {
+        // An error occurred
+        contentContainer.innerHTML = 'Unable to load content';
+      }
+    };
+    
+    // Send the request to retrieve content
+    xhr.send();
+    
   </script>
 
 </body>
