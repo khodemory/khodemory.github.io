@@ -5,20 +5,27 @@
 </head>
 
 <body>
+
   <h1>URL Proxy</h1>
-  
+
   <p>Enter a URL to proxy:</p>
   
   <input type="text" id="url-input">
   
   <button onclick="proxyURL()">Proxy URL</button>
-  
-  <iframe id="proxy-iframe"></iframe>
+
+  <p id="proxy-url"></p>
 
   <script>
     function proxyURL() {
       var url = document.getElementById("url-input").value;
-      document.getElementById("proxy-iframe").src = "https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/f/f1" + url;
+      
+      // Construct proxied url  
+      var proxy = "https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/f/f1/";
+      var proxyUrl = proxy + url;
+      
+      // Display proxied url
+      document.getElementById("proxy-url").innerText = proxyUrl;
     }
   </script>
 
