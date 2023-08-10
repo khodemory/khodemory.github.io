@@ -1,0 +1,66 @@
+/* style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#hero {
+  background-image: url('hero-bg.jpg');
+  background-size: cover;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.btn {
+  border: 1px solid #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+
+section {
+  padding: 50px 0;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  border: 1px solid #ccc;
+  padding: 8px;
+  width: 400px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
