@@ -1,0 +1,61 @@
+// code by claude.ai and MortezaHTGamer :))
+addEventListener('fetch', event => {
+    event.respondWith(handleRequest(event.request))
+    })
+    
+    async function handleRequest(request) {
+    
+    const path = new URL(request.url).pathname
+    
+    // Map paths to target URLs
+    const paths = {
+    '/site/contact': 'https://zil.ink/mortezahtgamer',
+    '/site/speedtest': 'https://speedtest.net',
+    '/ybk/mix': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix',
+    '/ybk/mix64': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/mix_base64',
+    '/ybk/don': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/donated',
+    '/ybk/don64': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/donated_base64',
+    '/ybk/vms': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess',
+    '/ybk/vms64': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess_base64',
+    '/ybk/vls': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vless',
+    '/ybk/vls64': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vless_base64',
+    '/ybk/real': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality',
+    '/ybk/real64': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/reality_base64',
+    '/ybk/trs': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/trojan',
+    '/ybk/trs64': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/trojan_base64',
+    '/ybk/sss': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/shadowsocks',
+    '/ybk/sss64': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/shadowsocks_base64',
+    '/ybk/clash': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/clash/mix.yml',
+    '/ybk/meta': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/meta/mix.yml',
+    '/ybk/surfboard': 'https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/surfboard/mix',
+    '/khdm/mine': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/khdm/mine',
+    '/bac/1': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/bac/1',
+    '/codesb/1': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/codesb/1',
+    '/codesb/2': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/codesb/2',
+    '/codesb/3': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/codesb/1',
+    '/dop/1': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/dop/1',
+    '/dop/2': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/dop/2',
+    '/okt/1': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/okt/1',
+    '/okt/2': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/okt/2',
+    '/rep/1': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/rep/1',
+    '/rep/2': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/rep/2',
+    '/rep/4': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/rep/4',
+    '/': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/f/f1',
+    '/f/f1h': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/f/f1h',
+    '/f/f1n': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/f/f1n',
+    '/f/w1': 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/f/w1'
+    }
+    
+    // Fetch target URL if path is mapped
+    if (path in paths) {
+    const target = paths[path]
+    const res = await fetch(target)
+    return new Response(res.body, {
+    headers: res.headers
+    })
+    }
+    
+    // Return 404 for unmapped paths
+    return new Response('Not found', {status: 404})
+    
+    }
