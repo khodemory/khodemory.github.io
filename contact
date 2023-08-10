@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Khodemory Contact Page</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <h1>Khodemory Contact</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>  
+      </nav>
+    </div>
+  </header>
+
+  
+    <div class="featured-items">
+      <div class="featured-item">
+        <img src="img1.png">
+        <h3>Contact Me</h3>
+        <p>You can Email me: me@mhtg2-fallcoon.gq</p>  
+      </div>
+      
+      <!-- Additional Featured Items -->
+      
+    </div>
+  </section>
+
+  <!-- More Sections -->
+
+</body>
+</html>
