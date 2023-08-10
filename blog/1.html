@@ -1,36 +1,26 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Display External URL Content</title>
+  <title>Display External Content</title>
 </head>
+
 <body>
 
   <div id="external-content"></div>
 
   <script>
-    // The URL to load content from 
-    var externalUrl = 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/f/f1';
-    
-    // The element on the page to display the external content
-    var contentContainer = document.getElementById('external-content');
-    
-    // Create a new XMLHttpRequest
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', externalUrl);
-    
-    // Called when the response is ready
-    xhr.onload = function() {
-      if (xhr.status === 200) { 
-        // Content retrieved successfully
-        contentContainer.innerHTML = xhr.responseText; 
-      } else {
-        // An error occurred
-        contentContainer.innerHTML = 'Unable to load content';
-      }
-    };
-    
-    // Send the request to retrieve content
-    xhr.send();
-    
+    const externalUrl = 'https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/f/f1';
+    const contentContainer = document.getElementById('external-content');
+
+    fetch(externalUrl)
+      .then(response => response.text())
+      .then(data => {
+        contentContainer.innerHTML = data; 
+      })
+      .catch(error => {
+        console.error(error);
+        contentContainer.innerHTML = 'Failed to load content';
+      });
   </script>
 
 </body>
