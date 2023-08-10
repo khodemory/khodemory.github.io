@@ -9,24 +9,28 @@
   <h1>URL Proxy</h1>
 
   <p>Enter a URL to proxy:</p>
-  
+
   <input type="text" id="url-input">
-  
+
   <button onclick="proxyURL()">Proxy URL</button>
 
-  <p id="proxy-url"></p>
+  <div id="url-content"></div>
 
   <script>
+
     function proxyURL() {
+
       var url = document.getElementById("url-input").value;
-      
-      // Construct proxied url  
-      var proxy = "https://raw.githubusercontent.com/khodemory/Bw6G5wgi7H62GHG1/main/f/f1/";
-      var proxyUrl = proxy + url;
-      
-      // Display proxied url
-      document.getElementById("proxy-url").innerText = proxyUrl;
+      var proxy = "https://my-proxy.com/";
+
+      fetch(proxy + url)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("url-content").innerHTML = data;
+        });
+
     }
+
   </script>
 
 </body>
