@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-  <title>Website Title</title>
+  <title>Attractive Website</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
@@ -16,39 +13,45 @@
 
 <body>
 
-  <!-- Page header -->
+  <!-- Header -->
   <header>
-    <h1>Website Title</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>  
-      </ul>
-    </nav>
+    <div class="header-inner">
+      <h1>Website Title</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>  
+      </nav>
+    </div>
   </header>
 
-  <!-- Main content -->
-  <main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h2>An Attractive Website</h2>
+      <p>With modern design and stylish aesthetics</p>
+      <a href="/blog/1" class="btn">Learn More</a>
+    </div>
+  </section>
 
-    <!-- Hero section -->
-    <section class="hero">
-      <h2>Hero Title</h2>
-      <p>Hero description text goes here.</p>
-    </section>
+  <!-- Featured Section -->
+  <section class="featured">
+    <h2>Features</h2>
+    <p>Some content about the various features</p>
 
-    <!-- About section -->
-    <section class="about">
-      <h2>About Title</h2>
-      <p>About content text goes here.</p>
-    </section>
+    <div class="featured-items">
+      <div class="featured-item">
+        <img src="img1.png">
+        <h3>Feature One</h3>
+        <p>Detail about feature one</p>  
+      </div>
+      
+      <!-- Additional Featured Items -->
+      
+    </div>
+  </section>
 
-  </main>
-  
-  <!-- Page footer -->
-  <footer>
-    <p>&copy; Copyright 2023</p>
-  </footer>
+  <!-- More Sections -->
 
 </body>
 </html>
